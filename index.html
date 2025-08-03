@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kanban Board</h1>
+    <button id="themeToggle">🌗</button>
+  </header>
+
+  <main>
+    <section class="column" data-column="todo">
+      <h2>A Fazer</h2>
+      <div class="task-list" id="todo"></div>
+      <input type="text" placeholder="Nova tarefa..." id="input-todo" />
+      <button onclick="addTask('todo')">Adicionar</button>
+    </section>
+
+    <section class="column" data-column="doing">
+      <h2>Fazendo</h2>
+      <div class="task-list" id="doing"></div>
+      <input type="text" placeholder="Nova tarefa..." id="input-doing" />
+      <button onclick="addTask('doing')">Adicionar</button>
+    </section>
+
+    <section class="column" data-column="done">
+      <h2>Feito</h2>
+      <div class="task-list" id="done"></div>
+      <input type="text" placeholder="Nova tarefa..." id="input-done" />
+      <button onclick="addTask('done')">Adicionar</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
